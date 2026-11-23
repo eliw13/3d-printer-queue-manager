@@ -1,0 +1,14 @@
+# Secrets: printer access code and serial live here, never commit it
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

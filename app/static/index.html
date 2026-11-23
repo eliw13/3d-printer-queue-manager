@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Printer Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>P1S</h1>
+    <span id="conn" class="pill">Connecting…</span>
+    <span id="mock" class="pill warn" hidden>Mock data</span>
+  </header>
+
+  <main>
+    <section class="card camera">
+      <div class="card-head">
+        <h2>Camera</h2>
+        <div class="controls">
+          <label><input type="checkbox" id="auto"> Auto (10s)</label>
+          <button id="snap">Refresh</button>
+        </div>
+      </div>
+      <div class="frame">
+        <img id="cam" alt="Printer camera snapshot">
+        <p id="cam-msg" class="muted">Loading snapshot…</p>
+      </div>
+      <p id="cam-time" class="muted small"></p>
+    </section>
+
+    <section class="card job">
+      <div class="card-head">
+        <h2>Current job</h2>
+        <span id="state" class="badge">—</span>
+      </div>
+      <p id="job-name" class="job-name">No job</p>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <div class="stats">
+        <div><span class="label">Progress</span><span id="progress">—</span></div>
+        <div><span class="label">Layer</span><span id="layer">—</span></div>
+        <div><span class="label">Time left</span><span id="remaining">—</span></div>
+        <div><span class="label">Done at</span><span id="eta">—</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Temperatures</h2>
+      <div class="stats">
+        <div><span class="label">Nozzle</span><span id="nozzle">—</span></div>
+        <div><span class="label">Bed</span><span id="bed">—</span></div>
+        <div><span class="label">Speed</span><span id="speed">—</span></div>
+        <div><span class="label">Wi-Fi</span><span id="wifi">—</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Filament</h2>
+      <div id="ams" class="ams"><p class="muted">No AMS data</p></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
